@@ -334,17 +334,40 @@
             if ([123, 73, 85].includes(e.keyCode) || (e.ctrlKey && e.shiftKey && e.keyCode==73)) { alert('🔒 No permitido'); return false; }
         };
 
-        // 🎵 REPRODUCTOR — INTACTO
-        $("#player").lunaradio({
-           userinterface: "big", backgroundcolor: "rgba(0,17,59,1)", fontcolor: "#ffffff",
-           hightlightcolor: "#53012e", fontname: "Unica One", googlefont: "Unica+One&display=swap",
-           fontratio: "0.6", radioname: "Radio Chala 102.1 FM - La señal codificada... Que integra a la provincia de Caravelí", scroll: "true",
-           coverimage: "img/logo.png", onlycoverimage: "false", coverstyle: "animated",
-           usevisualizer: "real", visualizertype: "2", itunestoken: "1000lIPN",
-           streamurl: "https://stream-04.surfernetwork.com/5b3fwcx4sfvuv?",
-           streamtype: "zeno", idzeno: "5b3fwcx4sfvuv", volume: "100",
-           autoplay: "true", debug: "false", usestreamcorsproxy: "true"
-        });
+       // 🎵 REPRODUCTOR — HEARTHIS.AT ✅ LISTO
+$("#player").lunaradio({
+   userinterface: "big",
+   backgroundcolor: "rgba(0,17,59,1)",
+   fontcolor: "#ffffff",
+   hightlightcolor: "#53012e",
+   fontname: "Unica One",
+   googlefont: "Unica+One&display=swap",
+   fontratio: "0.6",
+   radioname: "Radio Chala 102.1 FM - La señal codificada... Que integra a la provincia de Caravelí",
+   scroll: "true",
+   coverimage: "img/logo.png",
+   onlycoverimage: "false",
+   coverstyle: "animated",
+   usevisualizer: "real",
+   visualizertype: "2",
+   itunestoken: "1000lIPN",
+   
+   // ✅ TRANSMISIÓN HEARTHIS.AT
+   streamurl: "https://streamlive2.hearthis.at:8000/11428957.ogg",
+   streamtype: "hearthis",
+   idhearthis: "11428957.ogg",
+   icecastmountpoint: "/11428957.ogg",
+   
+   // ✅ METADATOS — APARECE LA CANCIÓN QUE SUENA
+   metadatatechnic: "icecast",
+   ownmetadataurl: "https://streamlive2.hearthis.at:8000/status-json.xsl",
+   metadatarefresh: 3000,
+   
+   volume: "100",
+   autoplay: "true",
+   debug: "false",
+   usestreamcorsproxy: "true"
+});
 
         // 📲 PWA + DETECCIÓN IPHONE
         function isIOS() { 
