@@ -1,0 +1,419 @@
+﻿<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+
+    <!-- 🚀 METADATOS — INTACTOS -->
+    <title>RADIO CHALA 102.1 FM  📻 EL MEDIO QUE INTEGRA A LA PROVINCIA DE CARAVELI.</title>
+    <meta name="description" content="Radio Chala 102.1 FM: La mejor radio peruana con programación variada, locutores profesionales, noticias y música las 24 horas. Escúchanos desde cualquier parte del mundo.">
+    <meta name="keywords" content="radio peruana, Radio Chala 102.1 FM, radio en vivo, música variada, emisoras peruanas, sicuani, cusco, lima, arequipa, radio online">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://radiosunidas.github.io/radiochala">
+    <meta name="author" content="José Cutire Huayta">
+    <meta name="copyright" content="Radio Chala 102.1 FM - PARA EL MUNDO">
+    <meta name="theme-color" content="#53012e">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- 📱 COMPATIBILIDAD IPHONE / SAFARI -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Radio Chala 102.1 FM">
+    <link rel="apple-touch-icon" href="img/logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/logo-180.png">
+
+    <!-- REDES SOCIALES -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Radio Chala 102.1 FM - EL MEDIO QUE INTEGRA A LA PROVINCIA DE CARAVELI." />
+    <meta property="og:url" content="https://radiosunidas.github.io/radiochala" />
+    <meta property="og:title" content="Radio Chala 102.1 FM - PARA EL MUNDO 📻" />
+    <meta property="og:description" content="Tu radio peruana con la mejor programación las 24 horas del día" />
+    <meta property="og:image" content="img/logo.png" />
+
+    <!-- ✅ MANIFEST — INTACTO -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="img/logo.png" type="image/x-icon" />
+    <link rel="icon" type="image/png" sizes="192x192" href="img/logo-192.png">
+
+    <link href="css/stylec619.css?v=1.1" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css?v=1.0" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/lunaradio-animado.js"></script>
+
+    <style>
+        html, body { 
+            font-family: "Open Sans", sans-serif;
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            color: #000000;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        * {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        #installPopup {
+            display: none;
+            position: fixed;
+            bottom: 8%;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            background: rgba(221, 221, 221, 0.95);
+            padding: 18px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.6);
+            z-index: 1000;
+            text-align: center;
+            border-radius: 15px;
+        }
+        #installPopup button {
+            background: #000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+
+        /* 📂 MENÚ — CHAT Y YAPE DENTRO */
+        .nav-menu ul li a i { margin-right: 8px; }
+        .menu-acciones {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin: 15px 0;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        .btn-menu-accion {
+            padding: 8px 14px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.3s ease;
+            -webkit-transition: all 0.3s ease;
+        }
+        .btn-menu-accion.chat { background: #25D366; color: white; }
+        .btn-menu-accion.yape { background: #9C27B0; color: white; }
+        .btn-menu-accion:hover {
+            -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        /* 🟢 PIE DE PÁGINA — SUPER DELGADO, COMPACTO, AJUSTABLE */
+        .area-sociales {
+            background: #000;
+            padding: 8px 10px;
+            text-align: center;
+            width: 100%;
+            border-top: 1px solid #333;
+        }
+        .area-sociales p {
+            color: #fff;
+            margin: 0 0 6px 0;
+            font-weight: 500;
+            font-size: 13px;
+        }
+        /* 🆕 BOTONES HORIZONTALES, COMPACTOS, NO SE SALEN */
+        .botones-compartir {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 6px;
+        }
+        .btn-compartir {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+            transition: all 0.25s ease;
+            -webkit-transition: all 0.25s ease;
+            border: 1px solid rgba(255,255,255,0.3);
+            position: relative;
+            cursor: pointer;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            flex-shrink: 0;
+        }
+        /* ✨ EFECTO AL PASAR EL MOUSE */
+        .btn-compartir:hover, .btn-compartir:active {
+            -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+            box-shadow: 0 0 12px currentColor;
+            z-index: 10;
+        }
+        /* Nombrecito al pasar el mouse */
+        .btn-compartir .etiqueta {
+            position: absolute;
+            bottom: -24px;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.85);
+            color: white;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 10px;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            pointer-events: none;
+        }
+        .btn-compartir:hover .etiqueta,
+        .btn-compartir:active .etiqueta { opacity: 1; }
+
+        /* 🎨 COLORES POR RED SOCIAL */
+        .btn-whatsapp { background: #25D366; color: #fff; }
+        .btn-facebook { background: #1877F2; color: #fff; }
+        .btn-twitter { background: #000000; color: #fff; }
+        .btn-telegram { background: #0088cc; color: #fff; }
+        .btn-linkedin { background: #0A66C2; color: #fff; }
+        .btn-correo { background: #ea4335; color: #fff; }
+
+        .copyright {
+            background: #000;
+            color: #888;
+            padding: 4px 0;
+            text-align: center;
+            font-size: 0.75rem;
+            margin: 0;
+            border-top: 1px solid #222;
+        }
+
+        /* 🟢 VENTANAS — INTACTAS */
+        .ventana-interna {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.75);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+        .caja-ventana {
+            background: white;
+            width: 90%;
+            max-width: 420px;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 0 25px rgba(0,0,0,0.5);
+            border: 3px solid #ffcc66;
+        }
+        .cerrar-ventana {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 22px;
+            color: #333;
+            cursor: pointer;
+            font-weight: bold;
+            z-index: 10;
+        }
+        .cerrar-ventana:hover { color: red; }
+        .contenido-ventana {
+            padding: 20px;
+            max-height: 85vh;
+            overflow-y: auto;
+        }
+        .contenido-ventana iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="height:100vh">
+        <button type="button" class="mobile-nav-toggle" aria-label="Menú"><i class="fas fa-bars"></i></button>
+        <header id="header">
+            <section>
+                <nav class="nav-menu">
+                    <ul>
+                        <p>Síguenos en nuestras redes</p>
+                        <li style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+                            <a href="https://www.youtube.com/watch?v=g-Z2R9vUUBE" target="_blank" rel="noopener noreferrer"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670147.png" alt="YouTube" width="38" height="38"></a>
+                            <a href="https://web.facebook.com/frecuenciapopularnoticias" target="_blank" rel="noopener noreferrer"><img src="img/facebook.png" alt="Facebook" width="38" height="38"></a>
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="img/instagram.png" alt="Instagram" width="38" height="38"></a>
+                            <a href="https://chat.whatsapp.com/GcIjUP50nBTFjupJgn40pW?s=sh&p=a&mlu=0&ilr=4" target="_blank" rel="noopener noreferrer"><img src="img/whatsapp.png" alt="Grupo WhatsApp" width="38" height="38"></a>
+                            <a href="https://www.tiktok.com/@radio.chala" target="_blank" rel="noopener noreferrer"><img src="img/tiktok.png" alt="TikTok" width="38" height="38"></a>
+                        </li>
+
+                        <!-- 🆕 CHAT Y YAPE DENTRO DEL MENÚ -->
+                        <div class="menu-acciones">
+                            <a href="#" class="btn-menu-accion chat" onclick="abrirVentana('ventanaChat'); return false;">
+                                <i class="fas fa-comments"></i> Chat
+                            </a>
+                            <a href="#" class="btn-menu-accion yape" onclick="abrirVentana('ventanaYape'); return false;">
+                                <i class="fas fa-mobile-alt"></i> Yape
+                            </a>
+                        </div>
+
+                        <p>Radio Chala 102.1 FM para el Mundo</p>
+                    </ul>
+                </nav>
+            </section>
+        </header>
+
+        <!-- ✅ REPRODUCTOR — INTACTO, NO TOCADO -->
+        <div id="player"></div>
+        <center><iframe src="cel.html" width="100%" height="0" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" title="Reproductor móvil"></iframe></center>
+    </div>
+
+    <!-- 🪟 VENTANAS — INTACTAS -->
+    <div id="ventanaChat" class="ventana-interna" onclick="if(event.target===this)cerrarVentana('ventanaChat')">
+        <div class="caja-ventana">
+            <span class="cerrar-ventana" onclick="cerrarVentana('ventanaChat')">&times;</span>
+            <div class="contenido-ventana">
+                <iframe src="chat.html" title="Chat con nosotros"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div id="ventanaYape" class="ventana-interna" onclick="if(event.target===this)cerrarVentana('ventanaYape')">
+        <div class="caja-ventana">
+            <span class="cerrar-ventana" onclick="cerrarVentana('ventanaYape')">&times;</span>
+            <div class="contenido-ventana" style="text-align:center;">
+                <h2 style="color:#9C27B0;margin:0 0 15px 0;">💛 APOYO CON YAPE</h2>
+                <img src="https://i.imgur.com/cvMmHiM.jpeg" alt="QR Yape" style="width:260px;border-radius:12px;margin:10px 0;border:3px solid #9C27B0;">
+                <p style="font-size:16px;margin:8px 0;">Número: <strong>+51 940 938 534</strong></p>
+                <p style="font-size:16px;margin:8px 0;">A nombre: Giovanny Radio Chala</p>
+                <a href="yape.pe/930282895" style="display:inline-block;padding:10px 22px;background:#9C27B0;color:white;text-decoration:none;border-radius:25px;font-weight:bold;margin-top:10px;" rel="noopener">Ir directo a Yape</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    <div id="installPopup">
+        <p>📱 Instala la aplicación en tu celular</p>
+        <button id="installAppButton">
+          <img src="img/img-instalar-app-android.png" alt="Instalar en Android" height="48">
+        </button>
+        <div id="iosInstructions" style="display:none; text-align:left; padding:10px; font-size:14px; line-height:1.5;">
+            <p><strong>📱 Para iPhone / iPad:</strong></p>
+            <p>1. Toca el icono <strong>Compartir</strong> ↗️ abajo</p>
+            <p>2. Selecciona <strong>"Agregar a pantalla de inicio"</strong></p>
+            <p>3. Toca <strong>"Agregar"</strong> y ¡listo! 🎉</p>
+        </div>
+    </div>
+
+    <script>
+        // 🪟 ABRIR / CERRAR VENTANAS
+        function abrirVentana(id){ document.getElementById(id).style.display='flex'; }
+        function cerrarVentana(id){ document.getElementById(id).style.display='none'; }
+
+        // 🔒 PROTECCIÓN
+        document.addEventListener("contextmenu", e => { e.preventDefault(); alert('🔒 Contenido protegido - Radio Chala 102.1 FM'); });
+        document.onkeydown = e => {
+            if ([123, 73, 85].includes(e.keyCode) || (e.ctrlKey && e.shiftKey && e.keyCode==73)) { alert('🔒 No permitido'); return false; }
+        };
+
+        // 🎵 REPRODUCTOR — INTACTO
+        $("#player").lunaradio({
+           userinterface: "big", backgroundcolor: "rgba(0,17,59,1)", fontcolor: "#ffffff",
+           hightlightcolor: "#53012e", fontname: "Unica One", googlefont: "Unica+One&display=swap",
+           fontratio: "0.6", radioname: "Radio Chala 102.1 FM - PARA TODO EL MUNDO", scroll: "true",
+           coverimage: "img/logo.png", onlycoverimage: "false", coverstyle: "animated",
+           usevisualizer: "real", visualizertype: "2", itunestoken: "1000lIPN",
+           streamurl: "https://stream-04.surfernetwork.com/5b3fwcx4sfvuv?",
+           streamtype: "zeno", idzeno: "5b3fwcx4sfvuv", volume: "100",
+           autoplay: "true", debug: "false", usestreamcorsproxy: "true"
+        });
+
+        // 📲 PWA + DETECCIÓN IPHONE
+        function isIOS() { 
+            return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream; 
+        }
+        
+        if (isIOS()) {
+            document.getElementById('installAppButton').style.display = 'none';
+            document.getElementById('iosInstructions').style.display = 'block';
+        }
+
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', e => {
+            e.preventDefault(); 
+            deferredPrompt = e;
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('installPopup').style.display = 'block';
+        });
+        
+        document.getElementById('installAppButton').addEventListener('click', async () => {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('installPopup').style.display = 'none';
+            if (deferredPrompt) { deferredPrompt.prompt(); deferredPrompt = null; }
+        });
+        
+        document.getElementById('overlay').addEventListener('click', () => {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('installPopup').style.display = 'none';
+        });
+
+        // MENÚ
+        $(".mobile-nav-toggle").click(function () {
+            $("body").toggleClass("mobile-nav-active");
+            $(".mobile-nav-toggle i").toggleClass("fa-bars fa-times");
+        });
+    </script>
+
+    <!-- ✅ PIE DE PÁGINA — COMPACTO, DELGADO, SIN TEXTOS EXTRA -->
+    <footer class="area-sociales">
+        <p>📤 Comparte con tus amigos</p>
+        <div class="botones-compartir">
+            <a href="https://api.whatsapp.com/send?text=%c2%a1Hola!%20Te%20invito%20a%20escuchar%20RADIO%20Chala:%20https://radiosunidas.github.io/radiochala" target="_blank" rel="noopener noreferrer" class="btn-compartir btn-whatsapp">
+                <i class="fab fa-whatsapp"></i>
+                <span class="etiqueta">WhatsApp</span>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://radiosunidas.github.io/radiochala" target="_blank" rel="noopener noreferrer" class="btn-compartir btn-facebook">
+                <i class="fab fa-facebook-f"></i>
+                <span class="etiqueta">Facebook</span>
+            </a>
+            <a href="https://twitter.com/intent/tweet?text=%c2%a1Escucha%20RADIO%20CHALA!&url=https://radiosunidas.github.io/radiochala" target="_blank" rel="noopener noreferrer" class="btn-compartir btn-twitter">
+                <i class="fab fa-twitter"></i>
+                <span class="etiqueta">X/Twitter</span>
+            </a>
+            <a href="https://t.me/share/url?url=https://radiosunidas.github.io/radiochala&text=%c2%a1Escucha%20RADIO%20CHALA!" target="_blank" rel="noopener noreferrer" class="btn-compartir btn-telegram">
+                <i class="fab fa-telegram-plane"></i>
+                <span class="etiqueta">Telegram</span>
+            </a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://radiosunidas.github.io/radiochala" target="_blank" rel="noopener noreferrer" class="btn-compartir btn-linkedin">
+                <i class="fab fa-linkedin-in"></i>
+                <span class="etiqueta">LinkedIn</span>
+            </a>
+            <a href="mailto:?subject=RADIO%20CHALAS&body=%c2%a1Escucha%20RADIOS%20UNIDAS!%20https://radiosunidas.github.io/radiochala" class="btn-compartir btn-correo">
+                <i class="fas fa-envelope"></i>
+                <span class="etiqueta">Correo</span>
+            </a>
+        </div>
+        <div class="copyright">
+            &copy; José C.H.
+        </div>
+    </footer>
+</body>
+</html>
