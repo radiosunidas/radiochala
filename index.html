@@ -9,13 +9,13 @@
 
 
     <!-- 🚀 METADATOS — INTACTOS -->
-    <title>RADIO CHALA 102.1 FM  📻 EL MEDIO QUE INTEGRA A LA PROVINCIA DE CARAVELI.</title>
+    <title>RADIO CHALA 102.1 FM - EL MEDIO QUE INTEGRA A LA PROVINCIA DE CARAVELI.</title>
     <meta name="description" content="Radio Chala 102.1 FM: La mejor radio peruana con programación variada, locutores profesionales, noticias y música las 24 horas. Escúchanos desde cualquier parte del mundo.">
     <meta name="keywords" content="radio peruana, Radio Chala 102.1 FM, radio en vivo, música variada, emisoras peruanas, sicuani, cusco, lima, arequipa, radio online">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://radiosunidas.github.io/radiochala">
     <meta name="author" content="José Cutire Huayta">
-    <meta name="copyright" content="Radio Chala 102.1 FM - PARA EL MUNDO">
+    <meta name="copyright" content="Radio Chala 102.1 FM">
     <meta name="theme-color" content="#0a7506">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
@@ -336,34 +336,37 @@
 
 
 
-// 🎵 RADIO CHALA 102.1 FM — DEFINITIVO ✅
-$("#player").lunaradio({
-   userinterface: "big",
-   backgroundcolor: "rgba(0,17,59,1)",
-   fontcolor: "#ffffff",
-   hightlightcolor: "#0ebb00",
-   fontname: "Unica One",
-   googlefont: "Unica+One&display=swap",
-   fontratio: "0.6",
-   radioname: "RADIO CHALA 102.1 FM - La señal que integra la provincia de Caravelí",
-   scroll: "true",
-   coverimage: "img/logo.png",
-   onlycoverimage: "false",
-   coverstyle: "animated",
-   usevisualizer: "real",
-   visualizertype: "4",
-   itunestoken: "1000lIPN",
-   metadatatechnic: "ownmetadatatxt",
-   ownmetadatatxt: "radio uno",
-   metadatarefresh: 1000,
-   streamurl: "https://streamlive2.hearthis.at:8000/10459528.ogg?",
-   streamtype: "icecast",
-   icecastmountpoint: "/10459528.ogg",
-   volume: "100",
-   autoplay: "true",
-   debug: "false",
-   usestreamcorsproxy: "true"
-});
+
+        // Player setup
+        $("#player").lunaradio({
+           userinterface: "big",
+           backgroundcolor: "rgba(0,17,59,1)",
+           fontcolor: "#ffffff",
+           hightlightcolor: "#0a7506",
+           fontname: "Unica One",
+           googlefont: "Unica+One&display=swap",
+           fontratio: "0.6",
+           radioname: "RADIO CHALA 102.1 FM - EL MEDIO QUE INTEGRA A LA PROVINCIA DE CARAVELI...",
+           scroll: "true",
+           coverimage: "img/logo.png",
+           onlycoverimage: "false",
+           coverstyle: "animated",
+           usevisualizer: "real",
+           visualizertype: "2",
+           itunestoken: "1000lIPN",
+           metadatatechnic: "",
+           ownmetadataurl: "",
+           streamurl: "https://stream-178.surfernetwork.com/cj2bdvs3quytv?",
+           streamtype: "zeno", //soporta: zeno, icecast2, shoutcast2
+           idzeno: "cj2bdvs3quytv",
+           icecastmountpoint: "/radio.mp3",
+           shoutcastpath: "/live",
+           shoutcastid: "1",
+           volume: "100",
+           autoplay: "true",
+           debug: "false",
+           usestreamcorsproxy: "true",
+        });
 
 
         // 📲 PWA + DETECCIÓN IPHONE
@@ -431,9 +434,10 @@ $("#player").lunaradio({
                 <span class="etiqueta">Correo</span>
             </a>
         </div>
-        <div class="copyright">
-            &copy; José C.H.
+        <footer style="display:grid;align-content:end">
+        <div style="background-color:#000000;color:#fff;text-align:center;padding:5px">
+            &copy;<a href="https://radiosunidas.github.io/SANCAMILO">Desarrollado Por:[Jose Cutire].</a>
         </div>
-    </footer>
+        <script>
 </body>
 </html>
